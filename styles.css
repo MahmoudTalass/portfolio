@@ -2,15 +2,32 @@
    box-sizing: border-box;
    margin: 0;
    padding: 0;
+   font-family: sans-serif;
+   --main-color: #0990b2;
 }
 
 body {
    display: flex;
    flex-direction: column;
+   gap: 4rem;
    height: 100vh;
 }
 
+.header {
+   display: flex;
+   padding: 2rem 0;
+   background-color: var(--main-color);
+   clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
+}
+
+.header,
+.main-content {
+   padding-left: 2.5rem;
+   padding-right: 2.5rem;
+}
+
 .footer {
-   background-color: blue;
+   background-color: var(--main-color);
+   color: #fff;
    margin-top: auto;
 }

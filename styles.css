@@ -35,6 +35,20 @@ body {
    z-index: -1;
 }
 
+.header-img-container {
+   position: relative;
+}
+
+.name {
+   position: absolute;
+   top: 90%;
+   left: 50%;
+   transform: translate(-30%, -50%);
+   color: #fff;
+   width: 100%;
+   font-size: 2rem;
+}
+
 .about-me-section {
    background-color: #fff;
    padding: 2rem;

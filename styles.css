@@ -96,7 +96,7 @@ body {
 
 .projects-section {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
    gap: 1rem;
 }
 
@@ -106,9 +106,21 @@ body {
 }
 
 .project-screenshot {
-   background-color: red;
+   background-color: rgb(39, 84, 132);
    width: 100%;
    height: 150px;
+}
+
+.project-info {
+   padding: 0.8rem 1rem;
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+}
+
+.project-header {
+   display: flex;
+   justify-content: space-between;
 }
 
 .footer {

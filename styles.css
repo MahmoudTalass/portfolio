@@ -129,6 +129,15 @@ body {
    font-size: 1.2rem;
 }
 
+.project-links {
+   display: flex;
+   gap: 0.8rem;
+}
+
+.project-links img {
+   width: 25px;
+}
+
 .footer {
    background-color: var(--main-color);
    color: #fff;

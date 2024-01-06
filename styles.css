@@ -104,6 +104,7 @@ body {
    display: flex;
    flex-direction: column;
    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   padding-bottom: 2rem;
 }
 
 .project-screenshot {
@@ -113,7 +114,7 @@ body {
 }
 
 .project-info {
-   padding: 0.8rem 1rem 3rem;
+   padding: 0.8rem 1rem;
    display: flex;
    flex-direction: column;
    gap: 0.5rem;

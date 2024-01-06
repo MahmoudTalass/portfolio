@@ -94,6 +94,23 @@ body {
    font-size: 1.8rem;
 }
 
+.projects-section {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   gap: 1rem;
+}
+
+.project-card {
+   display: flex;
+   flex-direction: column;
+}
+
+.project-screenshot {
+   background-color: red;
+   width: 100%;
+   height: 150px;
+}
+
 .footer {
    background-color: var(--main-color);
    color: #fff;

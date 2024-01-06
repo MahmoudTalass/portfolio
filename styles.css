@@ -28,7 +28,7 @@ body {
    position: absolute;
    top: -170px;
    left: 0;
-   height: 100%;
+   height: 102%;
    width: 100%;
    background-color: var(--main-color);
    transform: skewY(-10deg);
@@ -80,6 +80,18 @@ body {
 .main-content {
    padding-left: 2.5rem;
    padding-right: 2.5rem;
+}
+
+.main-content {
+   max-width: 1500px;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+}
+
+.my-work-heading {
+   font-size: 1.8rem;
 }
 
 .footer {

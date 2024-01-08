@@ -11,7 +11,8 @@
 
 h1,
 h2,
-h3 {
+h3,
+.name {
    font-family: "Playfair Display", serif;
    font-weight: normal;
 }
@@ -25,12 +26,11 @@ body {
 }
 
 .header {
-   display: flex;
    position: relative;
+   padding: 2rem 0;
+   display: flex;
    align-items: center;
    justify-content: center;
-   padding: 2rem 0;
-   border: none;
 }
 
 .header::after {
@@ -46,29 +46,34 @@ body {
    z-index: -1;
 }
 
-.about-me-section {
-   background-color: #fff;
-   padding: 2rem;
-   max-width: 700px;
-   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
-   /* display: flex;
-   flex-direction: column; */
-}
-
 .header-img-container {
    position: relative;
    float: left;
-   width: fit-content;
+   padding-right: 1.5rem;
+}
+
+.heading-img {
+   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
 }
 
 .name {
    position: absolute;
    top: 90%;
    left: 50%;
-   transform: translate(-30%, -50%);
+   transform: translate(-40%, -50%);
    color: #fff;
    width: 100%;
-   font-size: 2rem;
+   font-size: 2.5rem;
+   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.55);
+}
+
+.about-me-section {
+   background-color: #fff;
+   padding: 2rem;
+   max-width: 1000px;
+   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+   min-height: 400px;
+   margin-top: 25px;
 }
 
 .about-me-heading {
@@ -78,13 +83,14 @@ body {
 .about-me-text {
    font-size: 1.2rem;
    color: #565656;
-   line-height: 1.5rem;
+   line-height: 1.7rem;
+   margin: 1.5rem 0;
 }
 
 .links-container {
-   align-self: flex-end;
    display: flex;
    gap: 1.2rem;
+   flex-direction: row-reverse;
 }
 
 .links-container > a > img {
@@ -100,7 +106,6 @@ body {
 .main-content {
    max-width: 1500px;
    width: 100%;
-   margin: auto;
    display: flex;
    flex-direction: column;
    gap: 0.5rem;
@@ -166,10 +171,6 @@ body {
    padding: 3rem;
 }
 
-.footer-img {
-   object-fit: cover;
-}
-
 .footer-info {
    display: flex;
    flex-direction: column;
@@ -195,6 +196,30 @@ body {
 }
 
 @media (max-width: 1200px) {
+   .header-img-container {
+      margin-top: -5px;
+   }
+
+   .name {
+      top: 6%;
+      left: 115%;
+      font-size: 2.5rem;
+   }
+
+   .about-me-section {
+      margin: 3.5rem 3rem;
+      padding-bottom: 3rem;
+   }
+
+   .about-me-heading {
+      text-align: center;
+      margin-top: 3rem;
+   }
+
+   .links-container {
+      display: none;
+   }
+
    .main-content {
       padding-left: 3rem;
       padding-right: 3rem;
@@ -202,5 +227,82 @@ body {
 
    .footer {
       gap: 2rem;
+   }
+}
+
+@media (max-width: 630px) {
+   .header {
+      padding: 1rem;
+   }
+
+   .header::after {
+      content: "";
+      position: absolute;
+      top: -600px;
+      left: 0;
+      transform: skewY(-25deg);
+   }
+
+   .header-content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .header-img-container {
+      float: none;
+      padding: 0;
+   }
+
+   .about-me-section {
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      margin-top: 1rem;
+      box-shadow: none;
+      padding: 0;
+      width: 100%;
+   }
+
+   .about-me-text {
+      align-items: center;
+   }
+
+   .about-me-heading {
+      margin: 0;
+   }
+
+   .links-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+   }
+
+   .name {
+      top: 90%;
+      left: 50%;
+      transform: translate(-55%, -75%);
+      width: 70%;
+      font-size: 3.2rem;
+   }
+
+   .main-content {
+      align-items: center;
+   }
+
+   .footer {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+   }
+
+   .footer-info {
+      align-items: center;
+      padding-top: 2rem;
+   }
+
+   .contact-links-container {
+      width: 100%;
    }
 }

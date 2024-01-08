@@ -9,7 +9,11 @@
    <body>
       <header class="header">
          <div class="header-img-container">
-            <img srcset="assets/cat-photo.jpeg" src="assets/cat-photo.jpeg" />
+            <img
+               srcset="assets/cat-photo.jpeg"
+               src="assets/cat-photo.jpeg"
+               class="header-img"
+            />
             <p class="name">Mahmoud Talass</p>
          </div>
          <section class="about-me-section">
@@ -196,8 +200,17 @@
                >
             </div>
          </div>
-         <div class="footer-img-container"></div>
-         <img src="assets/cat-photo-2.jpg" alt="" />
+         <picture class="footer-img"
+            ><source
+               media="(max-width: 1200px)"
+               srcset="
+                  assets/cat-photo-2-cropped.jpg         335w,
+                  assets/cat-photo-2-cropped-smaller.jpg 310w
+               "
+               sizes="(max-width: 680px) 310px, 335px"
+            />
+            <img src="assets/cat-photo-2.jpg" alt="" />
+         </picture>
       </footer>
    </body>
 </html>
